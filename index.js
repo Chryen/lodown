@@ -189,7 +189,7 @@ module.exports.filter = filter;
 * <array>.
 */
 function reject(array, test){
-    var trues = _.filter(array, test);
+    var trues = filter(array, test);
     var falses = [];
     for(let i = 0; i < array.length; i++){
         if(!trues.includes(array[i])){
@@ -212,8 +212,8 @@ module.exports.reject = reject;
 * <array>.
 */
 function partition(array, test){
-    var trues = _.filter(array, test);
-    var falses = _.reject(array, test);
+    var trues = filter(array, test);
+    var falses = reject(array, test);
     var combinedArray = [trues, falses];
     return combinedArray;
 }
@@ -253,7 +253,7 @@ module.exports.map = map;
 * @param {property}: The value used to check each element in <array>.
 */
 function pluck(arr, prop){
-   return  _.map(arr, function(object, index, array){
+   return map(arr, function(object, index, array){
         return object[prop];
     });
 }
