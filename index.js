@@ -250,7 +250,7 @@ module.exports.map = map;
 * every element in <array>.  _.map() must be used in the implementation.
 * 
 * @param {array}: The array over which to iterate.
-* @param {property: The value used to check each element in <array>.
+* @param {property}: The value used to check each element in <array>.
 */
 function pluck(arr, prop){
    return  _.map(arr, function(object, index, array){
