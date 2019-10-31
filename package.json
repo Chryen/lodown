@@ -1,0 +1,22 @@
+{
+  "name": "lodown-chryen",
+  "version": "1.0.0",
+  "description": "My first npm library",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha -- test/ -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chryen/lodown.git"
+  },
+  "author": "Chris Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chryen/lodown/issues"
+  },
+  "homepage": "https://github.com/Chryen/lodown#readme"
+}
