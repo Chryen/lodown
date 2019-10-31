@@ -369,7 +369,7 @@ module.exports.some = some;
 * <array>.
 * @param {seed}: Value used in the first iteration.
 */
-function reduce(array, action, seed){
+function reduce(array, test, seed){
     if(seed === undefined){
         for(var i = 0;i <= array.length - 1; i++){
             if(i === 0){
