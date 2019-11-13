@@ -264,8 +264,8 @@ module.exports.map = map;
 * pluck: Designed to return an array containing the value of <property> for
 * every element in <array>.
 * 
-* @param {array} array: The array over which to iterate.
-* @param {value} prop: The value used to check each element in <array>.
+* @param {array} arr: The array over which to iterate.
+* @param {string} prop: The string used to check key names.
 * @return {array}: Array containing the value of propertcy for every element in array.
 */
 function pluck(arr, prop){
@@ -387,7 +387,7 @@ module.exports.some = some;
 * @param {array} array: The array over which to iterate.
 * @param {function} test: The function to be applied over each element in 
 * <array>.
-* @param {seed} seed: Value used in the first iteration.
+* @param {value} seed: Value used in the first iteration.
 * @return {value}: The value of the final function call after the last iteration.
 * This value can be anything(string, number, array, object, etc etc).
 */
