@@ -4,8 +4,8 @@
 /**
  * identity: Designed to return the value that was passed in unchanged.
  * 
- * @param {value}: Any value that will be returned unchanged.
- * @return {value}; The value to be returned unchanged.
+ * @param {value} value: Any value that will be returned unchanged.
+ * @return {value}: The value to be returned unchanged.
  */
  function identity(value){
      return value;
@@ -15,7 +15,7 @@
  /**
   * typeOf: Designed to return the type of the value in string format.
   * 
-  * @param {value}: Any value that will be used to determine the type of.
+  * @param {value} value: Any value that will be used to determine the type of.
   * @return {string}: The string of the name of the typeo of value.
   */
  function typeOf(value){
@@ -46,8 +46,8 @@
  * (array[0] and array[1]).  If array is not an array, however, the function will return
  * an empty array [].  
  * 
- * @param {array}: The array that will be used to return certain elements.
- * @param (number): The number of elements that should be returned from the array.
+ * @param {array} array: The array that will be used to return certain elements.
+ * @param (number) number: The number of elements that should be returned from the array.
  * @return {array}: The array that contains the first set of numbers that is defined by the value of number.
  */
 function first(array, number){
@@ -76,9 +76,11 @@ function first(array, number){
 /**
  * last: Designed to return the last set of elements in an array.  The amount of
  * elements returned depends on what is passed through the number parameter.
+ * If number specifies 2, the function will return the last 2 elements of the array.
+ * If array is not an array, however, the function will return an empty array [].  
  * 
- * @param {array}: The array that will be used to return certain elements.
- * @param (number): The number of elements that should be returned from the array.
+ * @param {array} array: The array that will be used to return certain elements.
+ * @param (number) number: The number of elements that should be returned from the array.
  * @return {array}: The array that contains the last set of numbers.
  */
  function last(array, number){
@@ -100,8 +102,8 @@ function first(array, number){
   * indexOf: Designed to return the index of the array that is the first occurance of
   * <value>.  It should also return -1 if <value> is not in array.
   * 
-  * @param {array}: The array that will be checked by value.
-  * @param {value}: The value that will be used to check if array has a similar value.
+  * @param {array} array: The array that will be checked by value.
+  * @param {value} value: The value that will be used to check if array has a similar value.
   * @return {index}: The index of the array that is the first occurance of value.
   * @return (number): Return -1 if value does not exist in array
   */
@@ -119,8 +121,8 @@ module.exports.indexOf = indexOf;
   * contains: Designed to return true if the array contains <value>.  If <value> does 
   * not exist inside array, return false.
   * 
-  * @param {array}: The array that will be checked by value.
-  * @param {value}: The value that will be used to check if array has a similar value.
+  * @param {array} array: The array that will be checked by value.
+  * @param {value} value: The value that will be used to check if array has a similar value.
   * @return (boolean): Return true if array contains value, else false
   */
  function contains(array, value){
@@ -158,7 +160,7 @@ module.exports.each = each;
 * unique: Designed to return a new array of all elements from <array> with 
 * duplicates removed.
 * 
-* @param: {array}: The array over which to iterate and remove duplicates
+* @param: {array} array: The array over which to iterate and remove duplicates
 * @return: {array}: A new array of all elements from array after using Set
 */
 function unique(array){
@@ -171,7 +173,7 @@ module.exports.unique = unique;
 * the arguments: the element, it's index, <array>.  It should also return a new
 * array of elements for which calling <function> returned true.
 * 
-* @param {array}: The array over which to iterate.
+* @param {array} array: The array over which to iterate.
 * @param {function} test: The function to be applied over each element in 
 * <array>.
 * @return {array}: New array of elements for which calling function returned true.
@@ -193,7 +195,7 @@ module.exports.filter = filter;
 * passing arguments: the element, it's index, <array>.  This is the logical
 * inverse of _.filter(), so _.filter() must be used.
 * 
-* @param: {array}: The array over which to iterate.
+* @param: {array} array: The array over which to iterate.
 * @param: {function} test: The function to be applied over each element in 
 * <array>.
 * @return {array}: The array of elements for which calling function returned false.
@@ -217,7 +219,7 @@ module.exports.reject = reject;
 * And the other array must contain all values for which <function> returned 
 * something falsey.
 * 
-* @param: {array}: The array over which to iterate.
+* @param: {array} array: The array over which to iterate.
 * @param {function} test: The function to be applied over each element in 
 * <array>.
 * @return {array}: The array that is made up of 2 sub arrays, which 
@@ -262,8 +264,8 @@ module.exports.map = map;
 * pluck: Designed to return an array containing the value of <property> for
 * every element in <array>.
 * 
-* @param {array}: The array over which to iterate.
-* @param {property} prop: The value used to check each element in <array>.
+* @param {array} array: The array over which to iterate.
+* @param {value} prop: The value used to check each element in <array>.
 * @return {array}: Array containing the value of propertcy for every element in array.
 */
 function pluck(arr, prop){
@@ -382,10 +384,10 @@ module.exports.some = some;
 * use the first element/value of <collection> as <seed> and continue to the next
 * element.
 * 
-* @param {array}: The array over which to iterate.
+* @param {array} array: The array over which to iterate.
 * @param {function} test: The function to be applied over each element in 
 * <array>.
-* @param {seed}: Value used in the first iteration.
+* @param {seed} seed: Value used in the first iteration.
 * @return {value}: The value of the final function call after the last iteration.
 * This value can be anything(string, number, array, object, etc etc).
 */
@@ -412,7 +414,7 @@ module.exports.reduce = reduce;
 * <object 1>.  If more objects are passed in, copy their properties to 
 * <object 1> as well, in the order they are passed in.
 * 
-* @param {object}: The object(s) used to copy over eachother.
+* @param {object} object: The object(s) used to copy over eachother.
 * @return {object}: The final object that will contain all properties from the
 * objects that were passed in.  
 */
